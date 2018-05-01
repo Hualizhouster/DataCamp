@@ -12,7 +12,7 @@ from sqlalchemy import connet_engine
 import pandas as pd
 
 engine = create_engine("sqlite:///Chinook.sqlite")
-With connect_engine() as con:
+With engine.connect() as con:
     rs = con.execute("select * from employee where EmployeeId >= 6 order by BirthDate")
     df = pd.DataFrame(rs.fetchall())
     df.columns = rs.keys()
