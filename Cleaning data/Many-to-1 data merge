@@ -1,0 +1,11 @@
+Merge the site and visited DataFrames on the 'name' column of site and 'site' column of visited, exactly as you did in the previous exercise.
+Print the merged DataFrame and then hit 'Submit Answer' to see the different output produced by this merge!
+
+
+
+coding:
+# Merge the DataFrames: m2o
+m2o = pd.merge(left=site,right=visited,left_on='name',right_on='site')
+
+# Print m2o
+print(m2o)
