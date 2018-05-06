@@ -1,0 +1,30 @@
+###############
+Convert the sex column of the tips DataFrame to type 'category' using the .astype() method.
+Convert the smoker column of the tips DataFrame.
+Print the memory usage of tips after converting the data types of the columns. Use the .info() method to do this.
+
+Use pd.to_numeric() to convert the 'total_bill' column of tips to a numeric data type. Coerce the errors to NaN by specifying the keyword argument errors='coerce'.
+Convert the 'tip' column of 'tips' to a numeric data type exactly as you did for the 'total_bill' column.
+Print the info of tips to confirm that the data types of 'total_bill' and 'tips' are numeric.
+#####################
+
+
+coding:
+##########################
+# Convert the sex column to type 'category'
+tips.sex = tips.sex.astype('category')
+
+# Convert the smoker column to type 'category'
+tips.smoker = tips.smoker.astype('category')
+
+# Print the info of tips
+print(tips.info())
+
+# Convert 'total_bill' to a numeric dtype
+tips['total_bill'] = pd.to_numeric(tips['total_bill'], errors='coerce')
+
+# Convert 'tip' to a numeric dtype
+tips['tip'] = pd.to_numeric(tips['tip'], errors='coerce')
+
+# Print the info of tips
+print(tips.info())
