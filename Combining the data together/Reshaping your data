@@ -1,0 +1,17 @@
+##############
+Reshape gapminder by melting it. Keep 'Life expectancy' fixed by specifying it as an argument to the id_vars parameter.
+Rename the three columns of the melted DataFrame to 'country', 'year', and 'life_expectancy' by passing them in as a list to gapminder_melt.columns.
+Print the head of the melted DataFrame.
+################
+
+
+coding:
+
+# Melt gapminder: gapminder_melt
+gapminder_melt = pd.melt(gapminder, id_vars = 'life_expectancy')
+
+# Rename the columns
+gapminder_melt.columns = ['country', 'year', 'life_expectancy']
+
+# Print the head of gapminder_melt
+print(gapminder_melt.head())
