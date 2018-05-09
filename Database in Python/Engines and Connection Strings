@@ -1,0 +1,15 @@
+Import create_engine from the sqlalchemy module.
+Using the create_engine() function, create an engine for a local file named census.sqlite with sqlite as the driver. Be sure to enclose the connection string within quotation marks.
+Print the output from the .table_names() method on the engine.
+
+
+coding:
+##############
+# Import create_engine
+from sqlalchemy import create_engine
+
+# Create an engine that connects to the census.sqlite file: engine
+engine = create_engine('sqlite:///census.sqlite')
+
+# Print table names
+print(engine.table_names())
