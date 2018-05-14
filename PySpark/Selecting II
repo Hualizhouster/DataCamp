@@ -24,10 +24,10 @@ Create the same table using .selectExpr() and a string containing a SQL expressi
 
 #############################
 # Define avg_speed
-avg_speed = (flights.___/(flights.___/60)).alias("___")
+avg_speed = (flights.distance/(flights.air_time/60)).alias("avg_speed")
 
 # Select the correct columns
 speed1 = flights.select("origin", "dest", "tailnum", avg_speed)
 
 # Create the same table using a SQL expression
-speed2 = flights.selectExpr("___", "___", "___", "distance/(air_time/60) as ___")
+speed2 = flights.selectExpr("origin", "dest", "tailnum", "distance/(air_time/60) as avg_speed")
